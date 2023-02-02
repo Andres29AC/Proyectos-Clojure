@@ -1,0 +1,107 @@
+.horizontal{
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: auto;display: flex;
+    background-color: aliceblue;
+    box-shadow: inset 0 0 0 1px #297474;
+    border-radius: 10px; 
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 45%;
+    height: 40%;
+}
+
+/*
+.horizontal:hover{
+    background-color:salmon;
+    transition-property: background-color;
+    transition-duration: 3s;
+    transform: rotate(45deg);
+    transition-property: transform;
+}*/
+.estilo{
+    display:flex;
+    text-align: center;
+    font-size: 12px;
+    font-family: 'Times New Roman', Times, serif;
+}
+.pr-15{
+    padding-right: 15px;
+}
+.editar{
+    /*margin: 0 auto; */  
+   display: grid;
+   grid-template-columns: repeat(3, 3fr);
+   grid-gap: 10px;
+   justify-content: center;
+}
+
+.centrar{
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    /* dandole un espacio esntre botones*/
+    margin-top: 10px;
+}
+.centrar:hover{
+    background-color: #266e74;
+    transition-property: background-color;
+    transition-duration: 0.5s;
+}
+.coder{
+    text-align: center;
+    background-color: coral;
+}
+.animate__animated.animate__wobble{
+    animation-duration: 1s;
+}
+body{
+    background-image: url("img/fondo.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment:fixed;
+}
+.enlace{
+    color: white;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    font-size: 17px;
+    font-family: 'Roboto', sans-serif;
+    margin-top: 10px;
+}
+.color{
+    background-color: seagreen;
+    width: 12%;
+    justify-content: center;
+    margin: auto;
+    border-radius: 5px;
+}
+.repo{
+    background-color:darkslateblue;
+    width: 12%;
+    justify-content: center;
+    margin: auto;
+    border-radius: 5px;
+}
+.repositorio{
+    color: white;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    font-size: 17px;
+    font-family: 'Roboto', sans-serif;
+    margin-top: 10px;
+}
+.color:hover{
+    background-color: #266e74;
+    transition-property: background-color;
+    transition-duration: 0.5s;
+}
+.repo:hover{
+    background-color: #266e74;
+    transition-property: background-color;
+    transition-duration: 0.5s;
+}
