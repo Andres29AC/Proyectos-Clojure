@@ -2,6 +2,8 @@
   (:require [reagent.core :as r]
             [blog.components.header :refer [header]]
             [blog.components.tags :refer [tags-component]]
+            [blog.components.about :refer [about-page]]
+            [blog.components.footer :refer [footer]]
             [reagent.dom :as dom]))
 
 (defn app []
@@ -9,7 +11,8 @@
    [header] 
    [tags-component]
    [:main
-    [:p "Bienvenido a mi blog."]]])
+    [about-page]]
+   [footer]])
 
 (defn init []
   (dom/render [app]
