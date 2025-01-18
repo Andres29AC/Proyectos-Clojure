@@ -7,7 +7,7 @@
     [:img {:src "/assets/svg/developer.svg"
            :alt "Logo del blog"
            :class "w-12 h-12"}]
-    [:span {:class "ml-2 text-xl font-bold text-gray-800"} "CoderLion"]]
+    [:span {:class "ml-2 text-xl font-bold text-gray-800"} "KatasCode"]]
    [:nav
     [:ul {:class "flex space-x-6"}
      [:li [:a {:href "#" :class "text-gray-700 hover:text-blue-500 font-semibold"} "Archives"]]

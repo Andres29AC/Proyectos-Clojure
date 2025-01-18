@@ -6,6 +6,7 @@
             [blog.components.footer :refer [footer]]
             [reagent.dom :as dom]))
 
+
 (defn app []
   [:div
    [header] 
