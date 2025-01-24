@@ -1,42 +1,5 @@
 (ns blog.components.about)
 
-
-;; (defn profile-card []
-;;   [:div {:style {:border "1px solid #ddd"
-;;                  :border-radius "12px"
-;;                  :padding "24px"
-;;                  :max-width "800px"
-;;                  :display "flex"
-;;                  :align-items "center"
-;;                  :box-shadow "0 6px 12px rgba(0, 0, 0, 0.18)"
-;;                  :margin-bottom "24px"
-;;                  :transition "transform 0.3s ease, box-shadow 0.3s ease"
-;;                  :cursor "pointer"
-;;                  :on-mouse-over #(aset (.-style (.-currentTarget %)) "transform" "scale(1.02)")
-;;                  :on-mouse-out #(aset (.-style (.-currentTarget %)) "transform" "scale(1)")}}
-;;    [:img {:src "/assets/img/nitoku.png"
-;;           :alt "Foto de perfil"
-;;           :style {:border-radius "50%"
-;;                   :width "150px"
-;;                   :height "150px"
-;;                   :object-fit "cover"
-;;                   :margin-right "24px"}}]
-;;    [:div {:style {:text-align "left"}}
-;;     [:h2 {:style {:font-size "1.8rem" :margin "0 0 8px"}} "CoderLion"]
-;;     [:p {:style {:color "#666" :margin "8px 0" :font-size "1.2rem"}} "Ing de Sistemas 💻"]
-;;     [:p {:style {:color "#666" :margin "8px 0" :font-size "1.2rem"}} "Freelancer 🚀🇵🇪"]
-;;     [:a {:href "https://jade-buttercream-ee62f8.netlify.app/"
-;;          :target "_blank"
-;;          :style {:text-decoration "none"
-;;                  :display "inline-block"
-;;                  :padding "10px 20px"
-;;                  :background-color "#007bff"
-;;                  :color "#fff"
-;;                  :border-radius "5px"
-;;                  :font-size "1.1rem"
-;;                  :transition "background-color 0.3s ease"}}
-;;      "📁 Portfolio"]
-;;     ]])
 (defn profile-card []
   [:div {:style {:border "1px solid #ddd"
                  :border-radius "12px"

@@ -1,24 +1,3 @@
-;; (ns blog.components.footer
-;;   (:require [reagent.core :as r]))
-
-
-;; (defn footer []
-;;   [:footer {:class "bg-neutral-900 text-gray-400 py-6"}
-;;    [:div {:class "container mx-auto flex flex-col items-center space-y-4"}
-
-;;     [:h1 {:class "text-2xl font-semibold text-white"} "CoderLion"]
-
-
-;;     [:p {:class "text-center max-w-md"}
-;;      "CoderLion is a blog where you will find excellent tutorials on web development (ASMR), examples with Clojure, Elixir, Rust, mobile development and much more. Each tutorial is presented in detail, step by step, with the necessary source code."]
-
-
-;;     ;; Derechos reservados
-;;     [:p {:class "text-xs"}
-;;      "Copyright © 2025 "
-;;      [:a {:href "#foolishdeveloper" :class "hover:text-white"} "Foolishdeveloper"]]]])
-
-
 (ns blog.components.footer
   (:require [reagent.core :as r]))
 

@@ -1,17 +1,37 @@
-(ns blog.services.tag)
+(ns blog.services.tag
+  (:require [blog.services.post :refer [posts]]))
 
-;; Definición de la clase Tag
+
 (defrecord Tag [url name post-count])
 
-;; Constructor para crear un nuevo Tag
+
 (defn create-tag [url name post-count]
   (->Tag url name post-count))
-;; Lista de etiquetas
+
+
 (def tags
-  [(create-tag "/tags/clojure" "Clojure" 10)
-   (create-tag "/tags/react" "React" 8)
-   (create-tag "/tags/javascript" "JavaScript" 15)
-   (create-tag "/tags/web-development" "Web Development" 20) 
-   (create-tag "/tags/programming" "Programming" 25) 
-   (create-tag "/tags/functional-programming" "Functional Programming" 5)
-   ])
+  [(create-tag "/tags/clojure" "Clojure" 0)
+   (create-tag "/tags/react" "React" 0)
+   (create-tag "/tags/javascript" "JavaScript" 0)
+   (create-tag "/tags/web-development" "Web Development" 0)
+   (create-tag "/tags/programming" "Programming" 0)
+   (create-tag "/tags/functional-programming" "Functional Programming" 0)
+   (create-tag "/tags/development" "Development" 0)
+   (create-tag "/tags/software-engineering" "Software Engineering" 0)
+   (create-tag "/tags/software-architecture" "Software Architecture" 0)
+   (create-tag "/tags/software-design" "Software Design" 0)])
+
+
+(defn tag-posts [tag-name]
+  (filter #(= (:tag %) tag-name) posts))
+
+
+(defn update-tags []
+  (map (fn [tag]
+         (let [tag-name (:name tag)
+               count (count (tag-posts tag-name))]
+           (assoc tag :post-count count)))
+       tags))
+
+
+
