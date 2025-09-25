@@ -1,0 +1,12 @@
+{:db/connection {:dbtype "postgresql"
+                 :dbname "hospitaldb_clj"
+                 :user "postgres"
+                 :password "dev92AClion"
+                 :host "localhost"
+                 :port 5432}
+
+ :app/handler {}  ;; nuestro router HTTP
+
+ :jetty/server {:port 3000
+                :join? false
+                :handler #ig/ref :app/handler}}
