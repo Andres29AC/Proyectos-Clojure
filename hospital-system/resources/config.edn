@@ -5,7 +5,13 @@
                  :host "localhost"
                  :port 5432}
 
- :app/handler {}  ;; nuestro router HTTP
+
+ 
+ ;; repositorio de pacientes, depende de la conexión
+ :hospital/patient-repository {:ds #ig/ref :db/connection}
+
+ ;; handler de la app recibe el repo como dependencia
+ :app/handler {:repo #ig/ref :hospital/patient-repository}
 
  :jetty/server {:port 3000
                 :join? false

@@ -6,6 +6,7 @@
         metosin/reitit             {:mvn/version "0.7.0"}
         ring/ring-core             {:mvn/version "1.12.1"}
         ring/ring-jetty-adapter    {:mvn/version "1.12.1"}
+        ring/ring-json             {:mvn/version "0.5.1"}
 
         ;; Configuración / Integración
         integrant/integrant        {:mvn/version "0.8.1"}

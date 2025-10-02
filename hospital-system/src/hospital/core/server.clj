@@ -1,19 +1,20 @@
 (ns hospital.core.server
   (:require
-    [reitit.ring :as ring]
-    [ring.adapter.jetty :as jetty]
-    [integrant.core :as ig]
-    [clojure.edn :as edn]
-    [clojure.java.io :as io]
-    [hospital.shared.db]))
+   [ring.adapter.jetty :as jetty]
+   [integrant.core :as ig]
+   [hospital.modules.patients.presentation.routes.patient-route :as patient-routes]
+   [hospital.modules.patients.infrastructure.repositories.postgres-patient-repository :as postgres-repo]
+   [clojure.java.io :as io]
+   [hospital.shared.db]
+   [ring.middleware.json :refer [wrap-json-body wrap-json-response]]))
 
-;; Definimos el handler como un componente de Integrant
 (defmethod ig/init-key :app/handler
-  [_ _]
-  (ring/ring-handler
-    (ring/router
-      [["/ping" {:get (fn [_] {:status 200 :body "pong"})}]
-       ["/patients" {:get (fn [_] {:status 200 :body "List patients"})}]])))
+  [_ {:keys [repo]}]
+  ;; Middlewares que parsean JSON y devuelven JSON
+  (-> (patient-routes/routes repo)
+      ;; 👇 aquí la corrección: keywords? true
+      (wrap-json-body {:keywords? true :bigdecimals? true})
+      (wrap-json-response)))
 
 (defmethod ig/init-key :jetty/server
   [_ {:keys [port handler join?]}]

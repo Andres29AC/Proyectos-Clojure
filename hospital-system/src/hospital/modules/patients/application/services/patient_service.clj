@@ -14,3 +14,5 @@
 
 (defn list-patients [repo]
   (repo/find-all repo))
+(defn delete-patient [repo id]
+  (repo/delete repo id))

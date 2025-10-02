@@ -1,4 +1,4 @@
-(ns hospital.modules.patients.application.usecases.register-patient
+(ns hospital.modules.patients.application.uses-cases.register-patient
   (:require [hospital.modules.patients.application.services.patient-service :as service]))
 
 (defn execute [repo patient-data]
