@@ -1,14 +1,55 @@
 pom.xml
 pom.xml.asc
-*.jar
-*.class
-/lib/
-/classes/
+
+# --- Archivos y carpetas generadas por Clojure ---
 /target/
-/checkouts/
-.lein-deps-sum
-.lein-repl-history
-.lein-plugins/
-.lein-failures
-.nrepl-port
+/classes/
+/out/
+/resources/public/js/compiled/
+
+# Ignorar cljs-runtime en cualquier lugar
+**/cljs-runtime/
+
+# Ignorar archivos compilados JS (opcional pero recomendable)
+**/public/**/*.js
+**/public/**/*.js.map
+
+# --- Herramientas de análisis estático ---
+.clj-kondo/
+.lsp/
 .cpcache/
+.nrepl-port
+
+# --- Cachés y temporales ---
+*.log
+*.swp
+*.swo
+*.tmp
+
+# --- Leiningen ---
+.lein-repl-history
+.lein-failures
+/.lein-plugins/
+/.lein-env
+
+# --- Clojure CLI (deps.edn) ---
+/.jar/
+/.classpath
+/.cpcache/
+
+# --- Editor ---
+# IntelliJ / Cursive
+.idea/
+*.iml
+
+# VS Code
+.vscode/
+
+# Emacs / CIDER
+*.elc
+/.cider-repl-history
+/.cider-nrepl/
+
+# --- Sistema operativo ---
+.DS_Store
+Thumbs.db
