@@ -8,11 +8,18 @@
    [hospital.modules.patients.domain.enums.type-blood :as bt]
    [hospital.modules.patients.domain.enums.type-status :as st]))
 
+(comment #NOTE - 
+  Un defrecord es una forma de definir una estructura de datos inmutable en Clojure.
+  Similar a class,struct y DTO
+)
 (defrecord Patient
            [id type-document document-number first-name last-name birth-date type-gender
             marital-status address phone email blood-type allergies medical-history
             created-at created-by status])
 
+(comment #NOTE - 
+  Función constructora para crear una nueva instancia de Patient
+)
 (defn new-patient
   [{:keys [id type-document document-number first-name last-name birth-date type-gender
            marital-status address phone email blood-type allergies medical-history
@@ -35,6 +42,13 @@
              created-by
              status))
 
+(comment #NOTE - 
+  Funcion utilitaria para calcular la edad del paciente a partir de su fecha de nacimiento
+)
 (defn calculate-age [patient]
   (- (.. (java.time.LocalDate/now) getYear)
      (.. (:birth_date patient) getYear)))
+
+
+
+
